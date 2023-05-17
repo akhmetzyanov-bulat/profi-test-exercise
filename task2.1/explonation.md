@@ -19,7 +19,7 @@
 | 4 | 192.168.5.16/29 | 192.168.5.17 - 192.168.5.22 | 192.168.5.17 | 192.168.5.23 | 5 | 5 принтеров | 
 
 Пример настройки файрвола на маршрутизаторе Cisco на базе ACL (описал только часть конфигурации, которые касаются только таблицы маршрутизации между подсетями)
-
+```
 interface ethernet 1.2
 enable
 ip address 192.168.2.1/23
@@ -107,10 +107,10 @@ permit 192.168.4.0/24 192.168.5.16/29 eq 138
 permit 192.168.4.0/24 192.168.5.16/29 eq 139
 deny
 !
-
+```
 Настройки для проброса в интернет
 В качестве белого ip-адреса буду использовать 83.220.32.68
-
+```
 Router(config)# ip nat inside source static 192.168.4.0/24 83.220.32.68
 Router(config)# ip nat inside source static 192.168.5.0/28 83.220.32.68
 Router(config)# ip nat inside source static 192.168.3.0 83.220.32.68
@@ -118,7 +118,7 @@ Router(config)# interface ethernet 0
 Router(config)# enable
 Router(config)# ip nat inside
 Router(config)# ip nat outside
-
+```
 
 
 
