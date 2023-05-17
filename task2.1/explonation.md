@@ -115,9 +115,9 @@ Router(config)# ip nat inside source static 192.168.4.0/24 83.220.32.68
 Router(config)# ip nat inside source static 192.168.5.0/28 83.220.32.68
 Router(config)# ip nat inside source static 192.168.3.0 83.220.32.68
 Router(config)# interface ethernet 0
-Router(config)# enable
-Router(config)# ip nat inside
-Router(config)# ip nat outside
+Router(config-if)# enable
+Router(config-if)# ip nat inside
+Router(config-if)# ip nat outside
 ```
 
 
